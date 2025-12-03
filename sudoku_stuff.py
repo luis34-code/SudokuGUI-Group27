@@ -50,5 +50,12 @@ def lose_game():
     pygame.display.update()
 
 
-while True:
+for i in range(1000):
     start_screen()
+    screen.fill((255, 245, 225))
+for j in range(1000):
+    win_game()
+    screen.fill((255, 245, 225))
+for k in range(1000):
+    lose_game()
+    screen.fill((255, 245, 225))
