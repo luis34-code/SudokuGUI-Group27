@@ -51,36 +51,3 @@ class Cell:
         if self.show:
             pygame.draw.rect(self.screen, (255, 0, 0), self.rect1, width=3)
 
-def main():
-
-    try:
-        pygame.init()
-        screen = pygame.display.set_mode((500, 500))
-
-        cell = Cell(0, 220, 230, screen)
-
-        running = True
-        while running:
-            screen.fill((255, 255, 255))
-
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    running = False
-                elif event.type == pygame.MOUSEBUTTONDOWN:
-                    cell.click_event(event.pos)
-                elif event.type == pygame.KEYDOWN:
-                    if event.unicode in '123456789':
-                        cell.set_sketched_value(event.unicode)
-                    if event.key == pygame.K_RETURN:
-                        cell.set_cell_value(cell.sketched_value)
-                        cell.sketched_value = None
-        
-            cell.draw()
-
-            pygame.display.flip()
-     
-    finally:
-        pygame.quit()
-
-if __name__ == '__main__':
-    main()
