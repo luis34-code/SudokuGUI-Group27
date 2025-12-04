@@ -49,7 +49,7 @@ def lose_game():
     screen.blit(exit_select_text, (190, 325))
     pygame.display.update()
 
-
+'''
 for i in range(1000):
     start_screen()
     screen.fill((255, 245, 225))
@@ -59,3 +59,7 @@ for j in range(1000):
 for k in range(1000):
     lose_game()
     screen.fill((255, 245, 225))
+
+
+'''
+
